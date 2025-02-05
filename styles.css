@@ -1,0 +1,171 @@
+/* Global Resets and Typography */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  /* Animated gradient background */
+  background: linear-gradient(45deg, #667eea, #764ba2, #667eea);
+  background-size: 600% 600%;
+  animation: gradientAnimation 16s ease infinite;
+  color: #333;
+}
+
+/* Gradient Animation Keyframes */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Sidebar Styles */
+.sidebar {
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  min-height: 100vh;
+  padding: 40px 20px;
+  backdrop-filter: blur(10px);
+}
+
+.sidebar-inner {
+  text-align: center;
+}
+
+.profile-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.sidebar h1 {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  position: relative;
+}
+
+.social-links a {
+  color: #fff;
+  font-size: 20px;
+  transition: color 0.3s;
+  position: relative;
+}
+
+.social-links a:hover {
+  color: #d1c4e9;
+}
+
+/* Tooltip styling */
+.tooltip {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+/* Main Content Styles */
+.main-content {
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(5px);
+}
+
+/* Info Box (Glassmorphism) Styles */
+.info-box {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  height: 100%;
+  cursor: pointer;
+}
+
+.info-box.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.info-box:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+}
+
+.info-box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.info-box p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+/* Extra content toggled on click */
+.extra-content {
+  display: none;
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 10px;
+}
+
+.info-box.expanded .extra-content {
+  display: block;
+}
+
+/* Skill Bar Styles */
+.skill {
+  margin-bottom: 20px;
+}
+
+.skill-title {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.skill-bar {
+  background: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 10px;
+}
+
+.skill-progress {
+  height: 100%;
+  background: #667eea;
+  width: 0;
+  transition: width 2s ease;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .sidebar {
+    min-height: auto;
+  }
+}
