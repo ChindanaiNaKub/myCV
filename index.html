@@ -23,6 +23,27 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+     <!-- Bootstrap Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">John Doe</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#hobbies">Hobbies</a></li>
+          <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
   <div class="container-fluid">
     <div class="row">
       <!-- Sidebar -->
@@ -58,98 +79,128 @@
                 </div>
               </div>
             </div>
-            <!-- Skills Box -->
-            <div class="col-lg-4 col-md-6 col-sm-12">
-              <div class="info-box">
-                <h3>Skills</h3>
-                <p>HTML, CSS, JavaScript, React, and more.</p>
-                <!-- Example Skill Bars -->
-                <div class="skill">
-                  <div class="skill-title">HTML &amp; CSS</div>
-                  <div class="skill-bar">
-                    <div class="skill-progress" data-percent="95"></div>
-                  </div>
-                </div>
-                <div class="skill">
-                  <div class="skill-title">JavaScript</div>
-                  <div class="skill-bar">
-                    <div class="skill-progress" data-percent="90"></div>
-                  </div>
-                </div>
-                <div class="extra-content">
-                  <p>Click the box to reveal more details about my technical skills and certifications.</p>
-                </div>
+            <!-- Skills Section with Bootstrap Progress -->
+          <section id="skills" class="mb-5">
+            <div class="info-box">
+              <h3>Skills</h3>
+              <div class="progress mb-3" style="height: 25px;">
+                <div class="progress-bar" role="progressbar" style="width: 95%">HTML/CSS 95%</div>
+              </div>
+              <div class="progress mb-3" style="height: 25px;">
+                <div class="progress-bar" role="progressbar" style="width: 90%">JavaScript 90%</div>
+              </div>
+              <!-- Add 4 more skills -->
+              <div class="progress mb-3" style="height: 25px;">
+                <div class="progress-bar" role="progressbar" style="width: 85%">React 85%</div>
+              </div>
+              <div class="progress mb-3" style="height: 25px;">
+                <div class="progress-bar" role="progressbar" style="width: 80%">Node.js 80%</div>
+              </div>
+              <div class="progress mb-3" style="height: 25px;">
+                <div class="progress-bar" role="progressbar" style="width: 75%">Python 75%</div>
+              </div>
+              <div class="progress mb-3" style="height: 25px;">
+                <div class="progress-bar" role="progressbar" style="width: 85%">SQL 85%</div>
               </div>
             </div>
-            <!-- Experience Box -->
-            <div class="col-lg-4 col-md-6 col-sm-12">
-              <div class="info-box">
-                <h3>Experience</h3>
-                <p>
-                  <strong>Senior Web Developer</strong> at Tech Solutions (2020 - Present)
-                </p>
-                <p>
-                  Leading a team to create cutting-edge web applications.
-                </p>
-                <p>
-                  <strong>Front-End Developer</strong> at Creative Agency (2017 - 2020)
-                </p>
-                <p>
-                  Translated designs into responsive web pages.
-                </p>
-                <div class="extra-content">
-                  <p>More details: I have led multiple projects focusing on user experience and performance optimizations.</p>
-                </div>
-              </div>
+          </section>
+            <!-- Enhanced Experience Section -->
+          <section id="experience" class="mb-5">
+            <div class="info-box">
+              <h3>Experience</h3>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <h5>Senior Web Developer - Tech Solutions</h5>
+                  <p>2020 - Present</p>
+                  <ul>
+                    <li>Led team of 5 developers</li>
+                    <li>Implemented CI/CD pipeline</li>
+                  </ul>
+                </li>
+                <li class="list-group-item">
+                  <h5>Front-End Developer - Creative Agency</h5>
+                  <p>2017 - 2020</p>
+                  <ul>
+                    <li>Developed 20+ client websites</li>
+                    <li>Improved site performance by 40%</li>
+                  </ul>
+                </li>
+              </ul>
             </div>
-            <!-- Education Box -->
-            <div class="col-lg-4 col-md-6 col-sm-12">
-              <div class="info-box">
-                <h3>Education</h3>
-                <p>
-                  <strong>Bachelor of Science in Computer Science</strong>
-                  <br />University of Example (2013 - 2017)
-                </p>
-                <p>
-                  <strong>Certification:</strong> Full-Stack Web Development
-                  <br />Online Bootcamp (2018)
-                </p>
-                <div class="extra-content">
-                  <p>Graduated with honors and completed several major projects during my studies.</p>
-                </div>
-              </div>
+          </section>
+            <!-- Enhanced Education Section -->
+          <section id="education" class="mb-5">
+            <div class="info-box">
+              <h3>Education</h3>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <h5>University of Example</h5>
+                  <p>BSc Computer Science (2013-2017)</p>
+                </li>
+                <li class="list-group-item">
+                  <h5>Example High School</h5>
+                  <p>Science Stream (2011-2013)</p>
+                </li>
+              </ul>
             </div>
-            <!-- Awards Box -->
-            <div class="col-lg-4 col-md-6 col-sm-12">
-              <div class="info-box">
-                <h3>Awards</h3>
-                <p>
-                  <strong>Best Developer Award</strong>
-                  <br />Tech Conference 2021
-                </p>
-                <p>
-                  <strong>Innovation in Design</strong>
-                  <br />Creative Awards 2020
-                </p>
-                <div class="extra-content">
-                  <p>These awards highlight my commitment to innovation and excellence in web development.</p>
-                </div>
-              </div>
-            </div>
+          </section>
             <!-- Hobbies Box -->
-            <div class="col-lg-4 col-md-6 col-sm-12">
-              <div class="info-box">
-                <h3>Hobbies</h3>
-                <p>
-                  In my free time, I enjoy hiking, photography, and experimenting with new
-                  cooking recipes. I also love exploring new technologies and working on personal
-                  coding projects.
-                </p>
-                <div class="extra-content">
-                  <p>Exploring nature, capturing moments through photography, and honing my cooking skills help keep me inspired.</p>
+            <section id="hobbies" class="mb-5">
+                <div class="info-box">
+                  <h3>Hobbies</h3>
+                  <p>
+                    In my free time, I enjoy hiking, photography, and experimenting with new
+                    cooking recipes. I also love exploring new technologies and working on personal
+                    coding projects.
+                  </p>
+                  <div class="extra-content">
+                    <p>Exploring nature, capturing moments through photography, and honing my cooking skills help keep me inspired.</p>
+                  </div>
                 </div>
+              </section>
+              <!-- Portfolio Carousel -->
+          <section id="portfolio" class="mb-5">
+            <div class="info-box">
+              <h3>Portfolio</h3>
+              <div id="portfolioCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="project1.jpg" class="d-block w-100" alt="Project 1">
+                    <div class="carousel-caption">
+                      <h5>E-commerce Platform</h5>
+                      <p>React & Node.js application</p>
+                    </div>
+                  </div>
+                  <!-- Add 3 more carousel items -->
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon"></span>
+                </button>
               </div>
             </div>
+          </section>
+
+          <!-- Contact Section -->
+          <section id="contact" class="mb-5">
+            <div class="info-box">
+              <h3>Contact</h3>
+              <form>
+                <div class="mb-3">
+                  <input type="text" class="form-control" placeholder="Name">
+                </div>
+                <div class="mb-3">
+                  <input type="email" class="form-control" placeholder="Email">
+                </div>
+                <div class="mb-3">
+                  <textarea class="form-control" rows="4" placeholder="Message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+              </form>
+            </div>
+          </section>
           </div>
         </div>
       </main>
