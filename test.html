@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Modern CV</title>
+  <!-- Font Awesome for icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  />
+  <!-- Google Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    /* Reset & Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #f0f2f5;
+      color: #333;
+      line-height: 1.6;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Container Layout */
+    .container {
+      display: flex;
+      max-width: 1200px;
+      margin: 50px auto;
+      background: #fff;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    /* Sidebar Styles */
+    .sidebar {
+      width: 320px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .sidebar .profile-img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 5px solid #fff;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+    .sidebar h1 {
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+    .sidebar p {
+      font-size: 16px;
+      opacity: 0.9;
+      margin-bottom: 30px;
+    }
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+    .social-links a {
+      color: #fff;
+      font-size: 20px;
+      transition: color 0.3s;
+    }
+    .social-links a:hover {
+      color: #d1c4e9;
+    }
+
+    /* Main Content Styles */
+    .main-content {
+      flex: 1;
+      padding: 40px;
+    }
+    .section {
+      margin-bottom: 50px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease;
+    }
+    .section.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .section h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #444;
+      position: relative;
+      padding-bottom: 10px;
+    }
+    .section h2::after {
+      content: '';
+      position: absolute;
+      width: 50px;
+      height: 3px;
+      background: #667eea;
+      left: 0;
+      bottom: 0;
+      border-radius: 2px;
+    }
+    .section p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    /* Skill Bar Styles */
+    .skill {
+      margin-bottom: 20px;
+    }
+    .skill .skill-title {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+    .skill-bar {
+      background: #e0e0e0;
+      border-radius: 10px;
+      overflow: hidden;
+      height: 10px;
+    }
+    .skill-progress {
+      height: 100%;
+      background: #667eea;
+      width: 0;
+      transition: width 2s ease;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        margin: 20px;
+      }
+      .sidebar {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <img src="profile.jpg" alt="Profile Picture" class="profile-img" />
+      <h1>John Doe</h1>
+      <p>Web Developer</p>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <section class="section" id="about">
+        <h2>About Me</h2>
+        <p>
+          Passionate web developer with a keen eye for design and a love for creating
+          responsive, dynamic web applications. I combine functionality with creativity
+          to deliver exceptional digital experiences.
+        </p>
+      </section>
+
+      <section class="section" id="skills">
+        <h2>Skills</h2>
+        <div class="skill">
+          <div class="skill-title">HTML &amp; CSS</div>
+          <div class="skill-bar">
+            <div class="skill-progress" data-percent="95"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <div class="skill-title">JavaScript</div>
+          <div class="skill-bar">
+            <div class="skill-progress" data-percent="90"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <div class="skill-title">React</div>
+          <div class="skill-bar">
+            <div class="skill-progress" data-percent="85"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="experience">
+        <h2>Experience</h2>
+        <p>
+          <strong>Senior Web Developer</strong> at Tech Solutions (2020 - Present)
+        </p>
+        <p>
+          Leading a team of developers to create cutting-edge web applications with a focus
+          on performance and user experience.
+        </p>
+        <br />
+        <p>
+          <strong>Front-End Developer</strong> at Creative Agency (2017 - 2020)
+        </p>
+        <p>
+          Translated designs into responsive, interactive web pages for various client projects.
+        </p>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    // Intersection Observer to animate sections and skill bars on scroll
+    const sections = document.querySelectorAll('.section');
+    const observerOptions = { threshold: 0.5 };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          // Animate skill progress bars if the skills section is visible
+          if (entry.target.id === 'skills') {
+            document.querySelectorAll('.skill-progress').forEach(bar => {
+              const percent = bar.getAttribute('data-percent');
+              bar.style.width = percent + '%';
+            });
+          }
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    sections.forEach(section => observer.observe(section));
+
+    // Smooth scroll for any internal anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
