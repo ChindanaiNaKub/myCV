@@ -12,10 +12,11 @@
     background-size: 600% 600%;
     animation: gradientAnimation 16s ease infinite;
     color: #333;
+    min-height: 100vh;
    } 
 
   /* Navbar styling */
-.navbar {
+  .navbar {
     background: rgba(0, 0, 0, 0.8) !important;
     backdrop-filter: blur(10px);
   }
@@ -53,49 +54,87 @@
   }
   
   /* Sidebar Styles */
-  .sidebar {
-    background: rgba(0, 0, 0, 0.6);
-    color: #fff;
-    min-height: 100vh;
-    padding: 40px 20px;
-    backdrop-filter: blur(10px);
-  }
-  
-  .sidebar-inner {
-    text-align: center;
-  }
-  
-  .profile-img {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    border: 5px solid #fff;
-    object-fit: cover;
-    margin-bottom: 20px;
-  }
-  
-  .sidebar h1 {
-    font-size: 26px;
-    margin-bottom: 20px;
-  }
-  
-  .social-links {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    position: relative;
-  }
-  
-  .social-links a {
-    color: #fff;
-    font-size: 20px;
-    transition: color 0.3s;
-    position: relative;
-  }
-  
-  .social-links a:hover {
-    color: #d1c4e9;
-  }
+.sidebar {
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  min-height: 100vh;
+  padding: 40px 20px;
+  backdrop-filter: blur(10px);
+}
+
+.sidebar-inner {
+  text-align: center;
+}
+
+.profile-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.sidebar h1 {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+/* New styles for description and details */
+.profile-description {
+  margin: 1.5rem 0;
+  text-align: center;
+  color: #fff;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.profile-details {
+  margin: 1.5rem 0;
+  width: 100%;
+}
+
+.profile-details table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.profile-details td {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.profile-details td:first-child {
+  font-weight: bold;
+  text-align: left;
+  opacity: 0.7;
+}
+
+.profile-details td:last-child {
+  text-align: right;
+  opacity: 0.9;
+}
+
+/* Existing social links styles */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  position: relative;
+}
+
+.social-links a {
+  color: #fff;
+  font-size: 20px;
+  transition: color 0.3s;
+  position: relative;
+}
+
+.social-links a:hover {
+  color: #d1c4e9;
+}
   
   /* Tooltip styling */
   .tooltip {
@@ -197,6 +236,10 @@
   @media (max-width: 768px) {
     .sidebar {
       min-height: auto;
+      margin-top: 56px;
+    }
+    .main-content {
+      padding-top: 20px;
     }
   }
 
