@@ -27,16 +27,17 @@
   }
   
   .carousel-item img {
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.8;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; 
+    opacity: 0.8; 
   }
-  
+
   /* Form styling */
   .form-control {
     background: rgba(255,255,255,0.1);
     border: 1px solid rgba(255,255,255,0.3);
-    color: #fff;
+    color: #000;
   }
   
   /* Section spacing */
@@ -187,11 +188,10 @@
   }
   
   .skill-progress {
-    height: 100%;
-    background: #667eea;
     width: 0;
-    transition: width 2s ease;
-  }
+    background: #667eea !important;
+    transition: width 2s ease-in-out;
+}
   
   /* Responsive Adjustments */
   @media (max-width: 768px) {
@@ -199,4 +199,5 @@
       min-height: auto;
     }
   }
+
   
